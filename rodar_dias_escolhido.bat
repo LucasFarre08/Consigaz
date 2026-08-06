@@ -15,7 +15,7 @@ set "MYSQL_PASS=12345"
 set "MYSQL_DB=telemetria_consigaz"
 
 REM Templates a executar
-set "TEMPLATES=43 34 38 39 56 41 40 31 12 21"
+set "TEMPLATES=34 38 39 56 41 40 31 12 21"
 
 REM =========================================================
 REM DIRETÓRIO BASE
