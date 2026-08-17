@@ -10,7 +10,7 @@ set "MYSQL_HOST=127.0.0.1"
 set "MYSQL_USER=root"
 set "MYSQL_PASS=12345"
 set "MYSQL_DB=telemetria_consigaz"
-set "TEMPLATES=43"
+set "TEMPLATES=43 34 38 39 56 41 40 31 12 21"
 
 cd /d "%~dp0"
 
