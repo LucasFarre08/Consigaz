@@ -72,14 +72,15 @@ def dest_table_for_template(tid: int, resource_id: int | None = None) -> str:
     mapping = {
         43: "viagens",
         34: "ociosidade",
-        113: "rpm_amarelo",
+        38: "rpm amarelo",
         39: "rpm_vermelho",
         56: "kickdown",
         41: "velocidade_chuva_60km",
-        40: "velocidade_80km",
+        116: "velocidade_80km",
         31: "seguranca",
-        36: "freio",
+        12: "freio",
         21: "motoristas_viagens",
+       115: "parado_acelerando"
     }
 
     return mapping.get(tid, "report_data")
@@ -295,6 +296,15 @@ class SqlLogger:
             duracao time,
             quilometragem_inicial float,
             quilometragem_final float                         
+        ) ENGINE=InnoDB;
+        """)
+        self.cur.execute("""
+        CREATE TABLE IF NOT EXISTS parado_acelerando (
+            id BIGINT AUTO_INCREMENT PRIMARY KEY,
+            run_id INT NOT NULL,
+            sheet_name VARCHAR(255) NULL,
+            ativado datetime,
+            duracao time
         ) ENGINE=InnoDB;
         """)
 
